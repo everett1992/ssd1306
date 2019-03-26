@@ -171,6 +171,7 @@ where
         let numchars = match display_size {
             DisplaySize::Display128x64 => 128,
             DisplaySize::Display128x32 => 64,
+            DisplaySize::Quirk128x32 => 64,
             DisplaySize::Display96x16 => 24,
         };
 

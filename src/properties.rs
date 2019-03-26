@@ -51,6 +51,7 @@ where
         match self.display_size {
             DisplaySize::Display128x32 => Command::ComPinConfig(false, false).send(&mut self.iface),
             DisplaySize::Display128x64 => Command::ComPinConfig(true, false).send(&mut self.iface),
+            DisplaySize::Quirk128x32 => Command::ComPinConfig(true, false).send(&mut self.iface),
             DisplaySize::Display96x16 => Command::ComPinConfig(false, false).send(&mut self.iface),
         }?;
 

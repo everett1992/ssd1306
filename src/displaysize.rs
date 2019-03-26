@@ -10,6 +10,8 @@ pub enum DisplaySize {
     Display128x32,
     /// 96 by 16 pixels
     Display96x16,
+    /// Testing quirks with a 128x32 ssd1305 display.
+    Quirk128x32,
 }
 
 impl DisplaySize {
@@ -19,6 +21,7 @@ impl DisplaySize {
         match *self {
             DisplaySize::Display128x64 => (128, 64),
             DisplaySize::Display128x32 => (128, 32),
+            DisplaySize::Quirk128x32 => (128, 32),
             DisplaySize::Display96x16 => (96, 16),
         }
     }
